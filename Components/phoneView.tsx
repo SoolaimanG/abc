@@ -60,7 +60,7 @@ const PhoneView = (props: PropertyState) => {
     isProd,
   } = props;
 
-  const path = "location" in window ? window.location.href : null;
+  const path = typeof window !== 'undefined' && window.location.href
   const [hover, setHover] = useState(false);
   const store = useStore3((state) => state);
 
